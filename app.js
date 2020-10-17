@@ -9,7 +9,36 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const teamMembers = []
 
+function init(){
+    function createManger(){
+        console.log("plz build your Team")
+
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "mangerName",
+                message: "whats your manger's name?"
+            }
+
+
+        ])
+        
+
+    }
+    function createTeam(){
+        inquirer.prompt([
+            {
+                type: "list"
+                name: ""
+                message:
+                choices: ["Engineer","Intern","I don't want to add"]
+            }
+        ])
+    }
+
+}
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
